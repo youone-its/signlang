@@ -1,7 +1,11 @@
+a
 halo
+idle
 kami
-mahasiswa
+n
 nama
 perkenalkan
 saya
 terimakasih
+u
+y
