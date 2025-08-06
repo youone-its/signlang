@@ -10,7 +10,7 @@ MODEL_PATH = "model/gesture_model.h5"
 LABEL_ENCODER_PATH = "model/labels.txt"
 
 # Augmentasi: tambah noise kecil
-def add_noise(sequence, noise_level=0.03):
+def add_noise(sequence, noise_level=0.0):
     noise = np.random.normal(0, noise_level, sequence.shape)
     return sequence + noise
 
@@ -65,7 +65,7 @@ model.compile(
 # Train
 history = model.fit(
     X, y_encoded,
-    epochs=300,
+    epochs=500,
     batch_size=64,
     validation_split=0.3,
     # callbacks=[early_stop]
